@@ -83,11 +83,11 @@ def generate_launch_description():
         arguments=["trajectory_controller", "-c", "/controller_manager"],
     )
 
-    # velocity_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["velocity_controller", "-c", "/controller_manager"],
-    # )
+    velocity_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["velocity_controller", "-c", "/controller_manager"],
+    )
 
     # effort_controller_spawner = Node(
     #     package="controller_manager",
@@ -95,13 +95,21 @@ def generate_launch_description():
     #     arguments=["effort_controller", "-c", "/controller_manager"],
     # )
 
+    my_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[
+            "test_control", 
+            "--param-file", 
+            robot_controllers
+            ],
+    )
+
     nodes = [
         control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
-        trajectory_controller_spawner,
-        # velocity_controller_spawner,
-        # effort_controller_spawner,
+        my_controller_spawner,
     ]
 
     return LaunchDescription(
