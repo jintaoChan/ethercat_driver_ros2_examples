@@ -17,8 +17,8 @@
         <command_interface name="position"/>
         <command_interface name="velocity"/>
         <command_interface name="reset_fault"/>
-        <ec_module name="Maxon">
-          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
+        <ec_module name="stepper">
+          <plugin>ethercat_generic_plugins/WaitNeededEcCiA402Drive</plugin>
           <param name="alias">0</param>
           <param name="position">0</param>
           <param name="mode_of_operation">8</param>

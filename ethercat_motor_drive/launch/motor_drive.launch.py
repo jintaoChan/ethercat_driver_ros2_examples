@@ -109,7 +109,9 @@ def generate_launch_description():
         control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
-        my_controller_spawner,
+        # my_controller_spawner,
+        # velocity_controller_spawner,
+        trajectory_controller_spawner
     ]
 
     return LaunchDescription(

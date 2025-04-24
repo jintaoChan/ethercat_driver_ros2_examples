@@ -43,7 +43,7 @@ test_control:
       # - joint5
       # - joint6
     command_interfaces:
-      - velocity
+      - position
 
     state_interfaces:
       - position
