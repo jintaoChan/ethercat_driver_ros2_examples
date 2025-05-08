@@ -14,6 +14,10 @@ controller_manager:
     effort_controller:
       type: effort_controllers/JointGroupEffortController
 
+    control_pad_controller:
+      type: control_pad/ControlPadController
+
+
 trajectory_controller:
   ros__parameters:
     command_interfaces:
@@ -36,9 +40,8 @@ effort_controller:
     joints:
       - joint2
 
-test_control:
+control_pad_controller:
   ros__parameters:
-    type: test_control_interface/test_controller_interface
     joints:
       - joint2
       # - joint3
@@ -47,7 +50,10 @@ test_control:
       # - joint6
     command_interfaces:
       - position
+      - velocity
+      - mode
 
     state_interfaces:
       - position
       - velocity
+      - mode
