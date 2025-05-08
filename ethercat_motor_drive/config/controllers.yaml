@@ -22,6 +22,9 @@ trajectory_controller:
       - position
     joints:
       - joint2
+      # - joint3
+      # - joint4
+      # - joint5
 
 velocity_controller:
   ros__parameters:

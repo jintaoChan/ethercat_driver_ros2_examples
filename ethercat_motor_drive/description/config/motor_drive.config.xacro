@@ -5,6 +5,7 @@
   <xacro:include filename="$(find ethercat_motor_drive)/description/urdf/robot_description.urdf.xacro" />
 
   <xacro:include filename="$(find ethercat_motor_drive)/description/ros2_control/motor_drive.ros2_control.xacro" />
+  <!-- <xacro:include filename="$(find ethercat_motor_drive)/description/ros2_control/muti_motor_drive.ros2_control.xacro" /> -->
   <xacro:TechRobot/>
 
   <xacro:motor_drive/>

@@ -14,15 +14,17 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
+        <state_interface name="current_mode"/>
         <command_interface name="position"/>
         <command_interface name="velocity"/>
         <command_interface name="reset_fault"/>
-        <ec_module name="stepper">
-          <plugin>ethercat_generic_plugins/WaitNeededEcCiA402Drive</plugin>
+        <command_interface name="mode"/>
+        <ec_module name="tech">
+          <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
           <param name="alias">0</param>
           <param name="position">0</param>
           <param name="mode_of_operation">8</param>
-          <param name="slave_config">$(find ethercat_motor_drive)/config/stepper.yaml</param>
+          <param name="slave_config">$(find ethercat_motor_drive)/config/circulo.yaml</param>
         </ec_module>
       </joint>
     </ros2_control>
