@@ -7,30 +7,31 @@
       <hardware>
         <plugin>ethercat_driver/EthercatDriver</plugin>
         <param name="master_id">0</param>
-        <param name="control_frequency">100</param>
+        <param name="control_frequency">1000</param>
         <!-- <plugin>mock_components/GenericSystem</plugin> -->
 
       </hardware>
 
-      <!-- <joint name="joint2">
+      <joint name="joint2">
         <state_interface name="position"/>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
         <state_interface name="mode"/>
         <command_interface name="position"/>
         <command_interface name="velocity"/>
+        <command_interface name="effort"/>
         <command_interface name="reset_fault"/>
         <command_interface name="mode"/>
         <ec_module name="tech">
           <plugin>ethercat_generic_plugins/EcCiA402Drive</plugin>
           <param name="alias">0</param>
           <param name="position">0</param>
-          <param name="mode_of_operation">8</param>
-          <param name="slave_config">$(find ethercat_motor_drive)/config/circulo.yaml</param>
+          <param name="mode_of_operation">9</param>
+          <param name="slave_config">$(find ethercat_motor_drive)/config/abb.yaml</param>
         </ec_module>
-      </joint> -->
+      </joint>
 
-      <gpio name="beckhoff_input">
+      <!-- <gpio name="beckhoff_input">
         <state_interface name="d_1"/>
         <state_interface name="d_2"/>
         <state_interface name="d_3"/>
@@ -69,7 +70,7 @@
           <param name="position">2</param>
           <param name="slave_config">$(find ethercat_motor_drive)/config/el2809.yaml</param>
         </ec_module>
-      </gpio>
+      </gpio> -->
     </ros2_control>
 
   </xacro:macro>
