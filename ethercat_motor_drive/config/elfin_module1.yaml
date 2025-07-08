@@ -12,12 +12,12 @@ rpdo:  # RxPDO = receive PDO Mapping
   - index: 0x1600
     channels:
       - {index: 0x6040, sub_index: 0, axis: 1, type: uint16}  # Control word
-      - {index: 0x607a, sub_index: 0, axis: 1, type: int32, factor: 2106936.426795031450439812, offset: 53065, command_interface: position, default: .nan}  # Target position
+      - {index: 0x607a, sub_index: 0, axis: 1, type: int32, factor: 2106936.426795031450439812, offset: -53065, command_interface: position, default: .nan}  # Target position
       - {index: 0x3097, sub_index: 0, axis: 1, type: int16, factor: 624.277459791120192248, command_interface: velocity, default: 0}  # Target velocity
       - {index: 0x6071, sub_index: 0, axis: 1, type: int16, command_interface: torque, default: 0}  # Target Torque
       - {index: 0x6060, sub_index: 0, axis: 1, type: int8,  command_interface: mode, default: 8}  # Mode of operation
       - {index: 0x6840, sub_index: 0, axis: 2, type: uint16}  # Control word
-      - {index: 0x687a, sub_index: 0, axis: 2, type: int32, factor: 2106936.426795031450439812, offset: 1403981, command_interface: position, default: .nan}  # Target position
+      - {index: 0x687a, sub_index: 0, axis: 2, type: int32, factor: 2106936.426795031450439812, offset: -1403981, command_interface: position, default: .nan}  # Target position
       - {index: 0x3897, sub_index: 0, axis: 2, type: int16, factor: 624.277459791120192248, command_interface: velocity, default: 0}  # Target velocity
       - {index: 0x6871, sub_index: 0, axis: 2, type: int16, command_interface: torque, default: 0}  # Target Torque
       - {index: 0x6860, sub_index: 0, axis: 2, type: int8,  command_interface: mode, default: 8}  # Mode of operation
@@ -25,12 +25,12 @@ tpdo:  # TxPDO = transmit PDO Mapping
   - index: 0x1a00
     channels:
       - {index: 0x6041, sub_index: 0, axis: 1, type: uint16}  # Status word
-      - {index: 0x6064, sub_index: 0, axis: 1, type: int32, factor: 0.000000474622768529, offset: -0.02518585721198996,state_interface: position}  # Position actual value
+      - {index: 0x6064, sub_index: 0, axis: 1, type: int32, factor: 0.000000474622768529, offset: 0.02518585721198996,state_interface: position}  # Position actual value
       - {index: 0x606c, sub_index: 0, axis: 1, type: int32, factor: 0.00071193415279346,state_interface: velocity}  # Velocity actual value
       - {index: 0x6077, sub_index: 0, axis: 1, type: int16, state_interface: torque}  # Torque actual value
       - {index: 0x6061, sub_index: 0, axis: 1, type: int8,  state_interface: mode}  # Mode of operation display
       - {index: 0x6841, sub_index: 0, axis: 2, type: uint16}  # Status word
-      - {index: 0x6864, sub_index: 0, axis: 2, type: int32, factor: 0.000000474622768529, offset: -0.666361349182076256,state_interface: position}  # Position actual value
+      - {index: 0x6864, sub_index: 0, axis: 2, type: int32, factor: 0.000000474622768529, offset: 0.666361349182076256,state_interface: position}  # Position actual value
       - {index: 0x686c, sub_index: 0, axis: 2, type: int32, factor: 0.00071193415279346, state_interface: velocity}  # Velocity actual value
       - {index: 0x6877, sub_index: 0, axis: 2, type: int16, state_interface: torque}  # Torque actual value
       - {index: 0x6861, sub_index: 0, axis: 2, type: int8,  state_interface: mode}  # Mode of operation display
