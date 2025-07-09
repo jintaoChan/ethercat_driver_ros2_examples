@@ -1,0 +1,57 @@
+vendor_id: 0x00000766
+product_id: 0x00000401
+tpdo:
+  - index: 0x1a00
+    channels:
+      - {index: 0x6000, sub_index: 0x01, type: uint32, state_interface: force_sensor_1}
+      - {index: 0x6000, sub_index: 0x02, type: uint32, state_interface: force_sensor_2}
+      - {index: 0x6000, sub_index: 0x03, type: uint32, state_interface: force_sensor_3}
+      - {index: 0x6000, sub_index: 0x04, type: uint32, state_interface: force_sensor_4}
+      - {index: 0x6000, sub_index: 0x05, type: uint32, state_interface: force_sensor_5}
+      - {index: 0x6000, sub_index: 0x06, type: uint32, state_interface: force_sensor_6}
+      - {index: 0x6001, sub_index: 0x00, type: uint16, state_interface: digital_input}
+      - {index: 0x6002, sub_index: 0x00, type: uint16, state_interface: analog_input1}
+      - {index: 0x6003, sub_index: 0x00, type: uint16, state_interface: analog_input2}
+      - {index: 0x6004, sub_index: 0x00, type: uint16, state_interface: temparature}
+      - {index: 0x6005, sub_index: 0x00, type: uint16, state_interface: vdc_bus}
+      - {index: 0x6006, sub_index: 0x00, type: uint16}
+      - {index: 0x6007, sub_index: 0x00, type: uint16}
+      - {index: 0x6008, sub_index: 0x00, type: uint16}
+      - {index: 0x6009, sub_index: 0x00, type: uint16}
+      - {index: 0x600a, sub_index: 0x00, type: uint16}
+      - {index: 0x600b, sub_index: 0x00, type: uint16}
+      - {index: 0x600c, sub_index: 0x00, type: uint16}
+      - {index: 0x600d, sub_index: 0x00, type: uint16}
+      - {index: 0x600e, sub_index: 0x00, type: uint16}
+      - {index: 0x600f, sub_index: 0x00, type: uint16}
+      - {index: 0x6010, sub_index: 0x00, type: uint16}
+      - {index: 0x6011, sub_index: 0x00, type: uint16}
+      - {index: 0x6012, sub_index: 0x00, type: uint16}
+      - {index: 0x6013, sub_index: 0x00, type: uint16}
+      - {index: 0x6014, sub_index: 0x00, type: uint16}
+rpdo:
+  - index: 0x1601
+    channels:
+      - {index: 0x7001, sub_index: 0x00, type: uint16, command_interface: digital_output}
+      - {index: 0x7002, sub_index: 0x00, type: uint16}
+      - {index: 0x7003, sub_index: 0x00, type: uint16}
+      - {index: 0x7004, sub_index: 0x00, type: uint16}
+      - {index: 0x7005, sub_index: 0x00, type: uint16}
+      - {index: 0x7006, sub_index: 0x00, type: uint16}
+      - {index: 0x7007, sub_index: 0x00, type: uint16}
+      - {index: 0x7008, sub_index: 0x00, type: uint16}
+      - {index: 0x7009, sub_index: 0x00, type: uint16}
+      - {index: 0x700a, sub_index: 0x00, type: uint16}
+      - {index: 0x700b, sub_index: 0x00, type: uint16}
+      - {index: 0x700c, sub_index: 0x00, type: uint16}
+      - {index: 0x700d, sub_index: 0x00, type: uint16}
+      - {index: 0x700e, sub_index: 0x00, type: uint16}
+      - {index: 0x700f, sub_index: 0x00, type: uint16}
+      - {index: 0x7010, sub_index: 0x00, type: uint16}
+      - {index: 0x7011, sub_index: 0x00, type: uint16}
+
+sm:  # Sync Manager
+  - {index: 0, type: output, pdo: null, watchdog: disable}
+  - {index: 1, type: input, pdo: null, watchdog: disable}
+  - {index: 2, type: output, pdo: rpdo, watchdog: enable}
+  - {index: 3, type: input, pdo: tpdo, watchdog: disable}

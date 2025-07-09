@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="motor_drive">
+
+    <ros2_control name="motor_drive" type="system">
+      <hardware>
+        <plugin>ethercat_driver/EthercatDriver</plugin>
+        <param name="master_id">0</param>
+        <param name="control_frequency">1000</param>
+        <!-- <plugin>mock_components/GenericSystem</plugin> -->
+
+      </hardware>
+
+      <gpio name="rz_t1">
+        <state_interface name="force_sensor_1"/>
+        <state_interface name="force_sensor_2"/>
+        <state_interface name="force_sensor_3"/>
+        <state_interface name="force_sensor_4"/>
+        <state_interface name="force_sensor_5"/>
+        <state_interface name="force_sensor_6"/>
+        <state_interface name="digital_input"/>
+        <state_interface name="analog_input1"/>
+        <state_interface name="analog_input2"/>
+        <state_interface name="temparature"/>
+        <state_interface name="vdc_bus"/>
+        <command_interface name="digital_output"/>
+        <ec_module name="rz_t1">
+          <plugin>ethercat_generic_plugins/GenericEcSlave</plugin>
+          <param name="alias">0</param>
+          <param name="position">3</param>
+          <param name="slave_config">$(find ethercat_motor_drive)/config/rz_t1.yaml</param>
+        </ec_module>
+      </gpio>
+
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

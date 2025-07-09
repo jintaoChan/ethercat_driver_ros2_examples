@@ -58,6 +58,32 @@ gpio_controller:
           - d_7
           - d_8
 
+rz_t1_gpio_controller:
+  ros__parameters:
+    type: gpio_controllers/GpioCommandController
+    gpios:
+      - rz_t1
+    state_interfaces:
+      rz_t1:
+        - interfaces:
+          - force_sensor_1
+          - force_sensor_2
+          - force_sensor_3
+          - force_sensor_4
+          - force_sensor_5
+          - force_sensor_6
+          - digital_input
+          - analog_input1
+          - analog_input2
+          - temparature
+          - vdc_bus
+
+    command_interfaces:
+      rz_t1:
+        - interfaces:
+          - digital_output
+
+
 trajectory_controller:
   ros__parameters:
     command_interfaces:
