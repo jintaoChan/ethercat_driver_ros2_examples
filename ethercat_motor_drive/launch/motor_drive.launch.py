@@ -80,7 +80,7 @@ def generate_launch_description():
     controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["rz_t1_gpio_controller", "--param-file", robot_controllers],
+        arguments=["gpio_controller", "--param-file", robot_controllers],
     )
 
     my_controller_spawner = Node(

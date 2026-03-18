@@ -25,29 +25,29 @@ tpdo:
   - index: 0x1a07
     channels:
       - {index: 0x6070, sub_index: 0x01, type: bool, mask: 128, state_interface: d_8}
-  # - index: 0x1a08
-  #   channels:
-  #     - {index: 0x6080, sub_index: 0x01, type: bool, mask: 1, state_interface: d_9}
-  # - index: 0x1a09
-  #   channels:
-  #     - {index: 0x6090, sub_index: 0x01, type: bool, mask: 2, state_interface: d_10}
-  # - index: 0x1a0a
-  #   channels:
-  #     - {index: 0x60a0, sub_index: 0x01, type: bool, mask: 4, state_interface: d_11}
-  # - index: 0x1a0b
-  #   channels:
-  #     - {index: 0x60b0, sub_index: 0x01, type: bool, mask: 8, state_interface: d_12}
-  # - index: 0x1a0c
-  #   channels:
-  #     - {index: 0x60c0, sub_index: 0x01, type: bool, mask: 16, state_interface: d_13}
-  # - index: 0x1a0d
-  #   channels:
-  #     - {index: 0x60d0, sub_index: 0x01, type: bool, mask: 32, state_interface: d_14}
-  # - index: 0x1a0e
-  #   channels:
-  #     - {index: 0x60e0, sub_index: 0x01, type: bool, mask: 64, state_interface: d_15}
-  # - index: 0x1a0f
-  #   channels:
-  #     - {index: 0x60f0, sub_index: 0x01, type: bool, mask: 128, state_interface: d_16}
+  - index: 0x1a08
+    channels:
+      - {index: 0x6080, sub_index: 0x01, type: bool, mask: 1, state_interface: d_9}
+  - index: 0x1a09
+    channels:
+      - {index: 0x6090, sub_index: 0x01, type: bool, mask: 2, state_interface: d_10}
+  - index: 0x1a0a
+    channels:
+      - {index: 0x60a0, sub_index: 0x01, type: bool, mask: 4, state_interface: d_11}
+  - index: 0x1a0b
+    channels:
+      - {index: 0x60b0, sub_index: 0x01, type: bool, mask: 8, state_interface: d_12}
+  - index: 0x1a0c
+    channels:
+      - {index: 0x60c0, sub_index: 0x01, type: bool, mask: 16, state_interface: d_13}
+  - index: 0x1a0d
+    channels:
+      - {index: 0x60d0, sub_index: 0x01, type: bool, mask: 32, state_interface: d_14}
+  - index: 0x1a0e
+    channels:
+      - {index: 0x60e0, sub_index: 0x01, type: bool, mask: 64, state_interface: d_15}
+  - index: 0x1a0f
+    channels:
+      - {index: 0x60f0, sub_index: 0x01, type: bool, mask: 128, state_interface: d_16}
 sm:  # Sync Manager
   - {index: 3, type: input, pdo: tpdo, watchdog: enable}

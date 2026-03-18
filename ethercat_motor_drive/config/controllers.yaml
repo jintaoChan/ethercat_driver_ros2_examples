@@ -47,6 +47,25 @@ gpio_controller:
           - d_16
 
     state_interfaces:
+      beckhoff_output:
+        - interfaces:
+          - d_1
+          - d_2
+          - d_3
+          - d_4
+          - d_5
+          - d_6
+          - d_7
+          - d_8
+          - d_9
+          - d_10
+          - d_11
+          - d_12
+          - d_13
+          - d_14
+          - d_15
+          - d_16
+
       beckhoff_input:
         - interfaces:
           - d_1
@@ -57,6 +76,14 @@ gpio_controller:
           - d_6
           - d_7
           - d_8
+          - d_9
+          - d_10
+          - d_11
+          - d_12
+          - d_13
+          - d_14
+          - d_15
+          - d_16
 
 rz_t1_gpio_controller:
   ros__parameters:
@@ -90,9 +117,9 @@ trajectory_controller:
       - position
     state_interfaces:
       - position
+      - velocity
     joints:
-      - joint0
-      - joint1
+      - joint2
 
 position_controller:
   ros__parameters:
@@ -100,9 +127,11 @@ position_controller:
       - position
     state_interfaces:
       - position
+      - velocity
     joints:
-      - joint0
-      - joint1
+      # - joint0
+      # - joint1
+      - joint2
 
 velocity_controller:
   ros__parameters:
@@ -112,12 +141,12 @@ velocity_controller:
       - position
       - velocity
     joints:
-      - joint0
-      - joint1
+      # - joint0
+      # - joint1
       - joint2
-      - joint3
-      - joint4
-      - joint5
+      # - joint3
+      # - joint4
+      # - joint5
 
 effort_controller:
   ros__parameters:
